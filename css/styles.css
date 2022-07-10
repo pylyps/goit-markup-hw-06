@@ -46,6 +46,21 @@ margin:calc(var(--indent) / 2)
 overflow: hidden;
 }
 
+/* visibility-hidden */
+
+.visibility-hidden{
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0 );
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
 /* селектори тегів */
 *,
 *::before,
@@ -317,6 +332,7 @@ align-items: center;
     color: var(--color-button-prima);
     filter: drop-shadow(rgba(0, 0, 0, 0.25));
 }
+
 
 /* Описание преимуществ */
 
@@ -713,6 +729,56 @@ transform: translate(0%);
 overflow: hidden;
 }
 
+.footer-botton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+.primary.footer-botton{
+    width:286px;
+    height: 50px;}
+
+.footer-send{margin-left: 10px;}
+
+.footer-form{display: flex;
+}
+.footer-input{
+margin-right: 10px;
+width: 358px;
+height: 50px;
+padding-left: 16px;
+
+background-color: transparent;
+border: 1px solid rgba(255, 255, 255, 0.3);
+border-radius: 4px;
+
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: calc(20 / 16);
+color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-input:focus{
+margin-right: 10px;
+width: 358px;
+height: 50px;
+padding-left: 16px;
+
+background-color: transparent;  
+border: 1px solid rgba(255, 255, 255, 0.3);
+border-radius: 4px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: calc(20 / 16);
+color: rgba(255, 255, 255, 0.6);}
+
 /* Модальне вікно */
 
 .backdrop{
@@ -775,20 +841,105 @@ cursor: pointer;
 .modal-head {
 padding: 40px 40px 12px 40px;
 
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.15;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: var(--color-text-main);
-    background-color: tomato;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 1.15;
+text-align: center;
+letter-spacing: 0.03em;
+color: var(--color-text-main);
 }
 
 .modal-form{
-    display: flex;
-    flex-direction: column;
-    background-color: green;
-    
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+padding-bottom: 40px;
 }
+
+.modal-label{
+position: relative;
+display: inline-flex;
+flex-direction: column;
+width: 448px;
+padding-bottom: 10px;
+}
+
+.modal-label:not(:last-child){padding-bottom: 20px;}
+
+.modal-label.check-box{
+    display: flex;
+    flex-direction: row;
+    padding-left: 36px;
+}
+
+
+.modal-input{
+    padding-left: 45px;
+    padding-right: 5px;
+    height: 40px;}
+
+.modal-input:focus{
+    border: 1px solid #188CE8;
+}
+
+.modal-input:focus ~ .modal-icon {
+    fill:#2196F3;
+}
+
+.modal-desc{
+padding-bottom: 4px;
+    
+color: rgba(117, 117, 117, 1);}
+
+.check-box{
+padding-bottom: 30px;}
+
+
+.modal-link{color: var(--color-button-second);
+text-decoration: underline;}
+
+.modal-icon{
+    position: absolute;
+    bottom: 31px;
+    left: 12px;
+    
+    width: 18px;
+    height: 18px;
+    fill: black;
+}
+
+.modal-input:focus {border:none;}
+
+
+.input-check-box:checked ~ .modal-check-box{
+background-color: #188CE8;
+border: none;
+
+}
+
+.textarea-desc{
+padding-top: 12px;
+padding-left: 16px;
+}
+
+.modal-check-box{
+display: flex;
+align-items: center;
+justify-content: center;
+
+position: absolute;
+top: 0;
+left: 13px;
+
+width: 16px;
+height: 15px;
+    
+border: 2px solid  #212121;
+}
+
+.modal-use{
+    transform: translate(10%, 15%);}

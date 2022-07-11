@@ -752,6 +752,7 @@ padding-left: 16px;
 background-color: transparent;
 border: 1px solid rgba(255, 255, 255, 0.3);
 border-radius: 4px;
+outline: none;
 
 
 font-family: 'Roboto';
@@ -762,7 +763,9 @@ line-height: calc(20 / 16);
 color: rgba(255, 255, 255, 0.6);
 }
 
-.footer-input:focus{
+
+
+.footer-input:focus, .footer-input:not(:placeholder-shown) {
 margin-right: 10px;
 width: 358px;
 height: 50px;
@@ -880,15 +883,20 @@ padding-bottom: 10px;
 .modal-input{
     padding-left: 45px;
     padding-right: 5px;
-    height: 40px;}
+    height: 40px;
+border: 1px solid rgba(33, 33, 33, 0.2);
+outline: none;
+transition: border var(--animation)}
 
 .modal-input:focus{
     border: 1px solid #188CE8;
+    outline: none;
 }
 
 .modal-input:focus ~ .modal-icon {
-    fill:#2196F3;
-}
+    fill: #2196f3;
+    outline: none;
+    }
 
 .modal-desc{
 padding-bottom: 4px;
@@ -904,26 +912,33 @@ text-decoration: underline;}
 
 .modal-icon{
     position: absolute;
-    bottom: 31px;
+   
+    bottom: 30px;
     left: 12px;
     
     width: 18px;
     height: 18px;
-    fill: black;
+    fill: #212121;
+    transition: fill var(--animation);
 }
-
-.modal-input:focus {border:none;}
 
 
 .input-check-box:checked ~ .modal-check-box{
 background-color: #188CE8;
 border: none;
+outline: none;
 
 }
 
 .textarea-desc{
 padding-top: 12px;
 padding-left: 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    outline: none;
+}
+
+.textarea-desc:focus{border: 1px solid #188CE8;
+    outline: none;
 }
 
 .modal-check-box{
@@ -939,6 +954,7 @@ width: 16px;
 height: 15px;
     
 border: 2px solid  #212121;
+transition: background-color var(--animation);
 }
 
 .modal-use{

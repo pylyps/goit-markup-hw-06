@@ -605,9 +605,14 @@
           </li>
           <li>
             <h3 class="footer-header">Подпишитесь на рассылку</h3>
-            <form class="footer-form" action="mail">
+            <form class="footer-form">
               <label>
-                <input class="footer-input" type="email" placeholder="E-mail" />
+                <input
+                  class="footer-input"
+                  name="email"
+                  type="email"
+                  placeholder="E-mail"
+                />
               </label>
               <button class="button primary footer-botton" type="submit">
                 Подписаться
@@ -664,8 +669,6 @@
             <textarea
               class="textarea-desc"
               name="text"
-              cols="30"
-              rows="10"
               placeholder="Введите текст"
             ></textarea>
           </label>

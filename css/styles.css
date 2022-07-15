@@ -38,13 +38,24 @@ flex-wrap: wrap;
 margin: calc(-1 * var(--indent) /2);
 }
 
-.card-set-item{flex-basis: calc((100% - var(--indent) * var(--item-number)) / var(--item-number));
+.card-set__item{flex-basis: calc((100% - var(--indent) * var(--item-number)) / var(--item-number));
 margin:calc(var(--indent) / 2)
 }
 
 .no-scroll{
 overflow: hidden;
 }
+
+/* Head 2 */
+
+.head{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
 
 /* visibility-hidden */
 
@@ -75,12 +86,7 @@ h1,h2,h3,h4,p{
     margin: 0;
 }
 
-h2{
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
-    text-align: center;
-}
+
 
 img{display: block;
 max-width: 100%;
@@ -337,7 +343,7 @@ align-items: center;
 /* Описание преимуществ */
 
 .advantage{padding: 94px 0;}
-.advant-list, .work-list, .team-list{
+.advant-list {
     display: flex;
 }
 /* .advant-list .li+.li {
@@ -367,7 +373,7 @@ align-items: center;
 
 /* Команда */
 
-.card-set-item{
+.card-set__item{
 background: #FFFFFF;
    
 box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -379,20 +385,16 @@ border-radius: 0px 0px 4px 4px;
 .team-header{
 margin-bottom: 50px;}
 
-.team-list{--item-number: 4;
+.team__list{--item-number: 4;
 }
 
-.team-caption{
+.team__caption{
 padding: 30px;
 background-color: var(--color-button-prima);
 }
 
-.advant-title.work.team-header.team-title{
-color:var(--color-text-main);
-letter-spacing: 0.03em;
-}
 
-.advant-text.team-par.portfolio-class {
+.advant-text.portfolio-class {
 letter-spacing: 0.03em;
      
 color: var(--color-text-secondary);
@@ -419,14 +421,14 @@ color: var(--color-text-secondary)
 margin-right: 30px;
 }
 
-.team-sm-list{
+.sm{
 display: flex;
 justify-content: center;
 
 gap: 10px;
 }
 
-.team-social-media{
+.sm__archer{
 display: flex;
 align-items: center;
 justify-content: center;
@@ -435,18 +437,20 @@ width: 40px;
 height: 40px;
 border-radius: 50%;
 
-color: var(--color-clients);
+
 
 transition: color var(--animation);
 }
 
-.team-social-media:hover,
-.team-social-media:focus{
+.sm__archer--team{color: var(--color-clients);}
+
+.sm__archer--team:hover,
+.sm__archer--team:focus{
 background-color: var(--color-button-second);
 color: var(--color-button-prima);
 }
 
-.sm-link{
+.sm__link{
 max-width: 20px;
 max-height: 20px;
 fill:currentColor;
@@ -458,11 +462,11 @@ fill:currentColor;
 margin-bottom: 50px;
 }
 
-.work-pic{
+.work__item{
 position: relative;
 }
 
-.work-pic-desc {
+.work__desc {
 display: flex;
 justify-content: center;
 align-items: center;
@@ -489,16 +493,17 @@ padding-bottom: 94px;
 background-color: var(--color-bg-secondary);
 }
 
-.team-title{
+.team__title{
 margin: 0 0 10px 0;
     
 font-weight: 500;
 font-size: 16px;
 line-height: 1.19;
 text-align: center;
+
 }
 
-.team-par{
+.team__par{
 font-weight: 400;
 font-size: 16px;
 line-height: 1.36;
@@ -693,11 +698,11 @@ font-size: 16px;
 line-height: 1.88;
 letter-spacing: 0.03em;}
 
-.card-set-item.portfolio-item{
+.card-set__item.portfolio-item{
 box-shadow: none;
 }
 
-.card-set-item.portfolio-item:hover{
+.card-set__item.portfolio-item:hover{
 box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
             0px 1px 1px rgba(0, 0, 0, 0.14),
             0px 2px 1px rgba(0, 0, 0, 0.2);
